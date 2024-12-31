@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Memory Game</h1>
+  <p>Click on two cards to find a match!</p>
+
+  <!-- Difficulty Selector -->
+  <div class="difficulty">
+    <label for="difficulty">Choose Difficulty:</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+  </div>
+
+  <!-- Timer Mode Selector -->
+  <div class="timer-mode">
+    <label for="timer-mode">Choose Timer Mode:</label>
+    <select id="timer-mode">
+      <option value="off">No Timer</option>
+      <option value="short">60 seconds</option>
+      <option value="long">120 seconds</option>
+    </select>
+  </div>
+
+  <div class="game-board"></div>
+  <div class="stats">
+    <p>Moves: <span id="moves">0</span></p>
+    <p>Time: <span id="timer">0</span> seconds</p>
+  </div>
+  <div class="music-controls">
+    <button id="play-music">Play Music</button>
+    <button id="pause-music">Pause Music</button>
+    <button id="mute-music">Mute</button>
+    <input id="volume-control" type="range" min="0" max="1" step="0.1" value="0.5">
+  </div>
+  <button id="play-again" style="display: none;">Play Again</button>
+  <audio id="background-music" loop>
+    <source src="bg-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="flip-sound">
+    <source src="flip-sound.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
